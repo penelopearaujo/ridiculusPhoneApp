@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		522E38382151731100AD682F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 522E38372151731100AD682F /* AppDelegate.m */; };
-		522E383B2151731100AD682F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 522E383A2151731100AD682F /* ViewController.m */; };
+		522E383B2151731100AD682F /* ConnectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 522E383A2151731100AD682F /* ConnectViewController.m */; };
 		522E383E2151731100AD682F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 522E383C2151731100AD682F /* Main.storyboard */; };
 		522E38402151731200AD682F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 522E383F2151731200AD682F /* Assets.xcassets */; };
 		522E38432151731200AD682F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 522E38412151731200AD682F /* LaunchScreen.storyboard */; };
@@ -19,8 +19,8 @@
 		522E38332151731100AD682F /* ridiculusPhoneApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ridiculusPhoneApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		522E38362151731100AD682F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		522E38372151731100AD682F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		522E38392151731100AD682F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		522E383A2151731100AD682F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		522E38392151731100AD682F /* ConnectViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConnectViewController.h; sourceTree = "<group>"; };
+		522E383A2151731100AD682F /* ConnectViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConnectViewController.m; sourceTree = "<group>"; };
 		522E383D2151731100AD682F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		522E383F2151731200AD682F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		522E38422151731200AD682F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -60,8 +60,8 @@
 			children = (
 				522E38362151731100AD682F /* AppDelegate.h */,
 				522E38372151731100AD682F /* AppDelegate.m */,
-				522E38392151731100AD682F /* ViewController.h */,
-				522E383A2151731100AD682F /* ViewController.m */,
+				522E38392151731100AD682F /* ConnectViewController.h */,
+				522E383A2151731100AD682F /* ConnectViewController.m */,
 				522E383C2151731100AD682F /* Main.storyboard */,
 				522E383F2151731200AD682F /* Assets.xcassets */,
 				522E38412151731200AD682F /* LaunchScreen.storyboard */,
@@ -141,7 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				522E383B2151731100AD682F /* ViewController.m in Sources */,
+				522E383B2151731100AD682F /* ConnectViewController.m in Sources */,
 				522E38462151731200AD682F /* main.m in Sources */,
 				522E38382151731100AD682F /* AppDelegate.m in Sources */,
 			);

@@ -6,13 +6,13 @@
 //  Copyright © 2018 Penélope Araújo. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "ConnectViewController.h"
 
-@interface ViewController ()
+@interface ConnectViewController ()
 
 @end
 
-@implementation ViewController
+@implementation ConnectViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -26,4 +26,6 @@
 }
 
 
+- (IBAction)connectButton:(id)sender {
+}
 @end

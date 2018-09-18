@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ConnectViewController : UIViewController
+- (IBAction)connectButton:(id)sender;
 
 
 @end
