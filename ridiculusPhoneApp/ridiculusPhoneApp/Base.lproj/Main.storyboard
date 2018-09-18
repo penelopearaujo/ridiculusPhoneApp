@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wjS-5P-VGE">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -35,10 +35,10 @@
             </objects>
             <point key="canvasLocation" x="228" y="134"/>
         </scene>
-        <!--View Controller-->
+        <!--Search View Controller-->
         <scene sceneID="1y8-dz-cNy">
             <objects>
-                <viewController id="d2w-YB-Yt5" sceneMemberID="viewController">
+                <viewController id="d2w-YB-Yt5" customClass="SearchViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="f1s-A7-f7P">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -59,18 +59,22 @@
             </objects>
             <point key="canvasLocation" x="903" y="134"/>
         </scene>
-        <!--View Controller-->
+        <!--Set Microphone View Controller-->
         <scene sceneID="nJs-xq-PEG">
             <objects>
-                <viewController id="wjS-5P-VGE" sceneMemberID="viewController">
+                <viewController id="wjS-5P-VGE" customClass="SetMicrophoneViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ifa-ZA-XrR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HJV-jY-Jk9">
-                                <rect key="frame" x="164" y="515" width="46" height="30"/>
+                                <rect key="frame" x="172" y="515" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Ok"/>
+                                <connections>
+                                    <action selector="okListenButton:" destination="wjS-5P-VGE" eventType="touchUpInside" id="cec-BY-Fkd"/>
+                                    <segue destination="wzI-HM-T6e" kind="show" id="vmt-5z-KaA"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -81,16 +85,16 @@
             </objects>
             <point key="canvasLocation" x="1668" y="134"/>
         </scene>
-        <!--View Controller-->
+        <!--Listening View Controller-->
         <scene sceneID="K2F-Ia-ZdX">
             <objects>
-                <viewController id="wzI-HM-T6e" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="listeningViewcControllerID" id="wzI-HM-T6e" customClass="ListeningViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2fp-KC-RPR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="InH-Dl-pkR">
-                                <rect key="frame" x="166" y="520" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ESTAMOS OUVINDO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="InH-Dl-pkR">
+                                <rect key="frame" x="107" y="522" width="160" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
