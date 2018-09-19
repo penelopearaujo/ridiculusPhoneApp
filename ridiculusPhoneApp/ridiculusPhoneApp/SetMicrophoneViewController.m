@@ -36,11 +36,12 @@
 */
 
 - (IBAction)okListenButton:(id)sender {
+    // this button must open the next view controller (listening), when the listen function will be activated
     
 //    ListeningViewController *ListenView = [self.storyboard instantiateViewControllerWithIdentifier:@"listeningViewControllerID"];
 //    [ListenView setModalTransitionStyle:UIModalTransitionStyleCoverVertical];
 //    [self presentViewController:ListenView animated:YES completion:nil];
-    //[self.navigationController pushViewController:ListenView animated:YES];
+//    [self.navigationController pushViewController:ListenView animated:YES];
     
 }
 @end

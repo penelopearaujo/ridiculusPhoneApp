@@ -11,32 +11,63 @@
 
 @interface ListeningViewController ()
 
+@property(readonly) AVAudioSessionRecordPermission recordPermission;
+// https://developer.apple.com/documentation/avfoundation/avaudiosessionrecordpermission?language=objc
+
 @end
 
 @implementation ListeningViewController
 
+- (void)listenMic {
+    // detects microphone audio
+    
+    if (AVAudioSessionRecordPermissionGranted) {
+        NSLog(@"eita, funcionou");
+//        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+//        NSString *documentsDirectory = [paths objectAtIndex:0];
+        NSURL *url = [NSURL fileURLWithPath:@"/dev/null"]; //saves recording into temporary folder and file is erased when the app is closed
+        
+        NSDictionary *settings = [NSDictionary dictionaryWithObjectsAndKeys:
+                                  [NSNumber numberWithFloat: 44100.0],                 AVSampleRateKey,
+                                  [NSNumber numberWithInt: kAudioFormatAppleLossless], AVFormatIDKey,
+                                  [NSNumber numberWithInt: 1],                         AVNumberOfChannelsKey,
+                                  [NSNumber numberWithInt: AVAudioQualityMax],         AVEncoderAudioQualityKey,
+                                  nil];
+        NSError *error;
+        recorder = [[AVAudioRecorder alloc] initWithURL:url settings:settings error:&error];
+        
+        if (recorder) {
+            [recorder prepareToRecord];
+            recorder.meteringEnabled = YES;
+            [recorder record];
+            levelTimer = [NSTimer scheduledTimerWithTimeInterval: 0.03 target: self selector: @selector(levelTimerCallback:) userInfo: nil repeats: YES];
+        } else
+            NSLog(@"%@", [error description]);
+    }
+}
 
+- (void)levelTimerCallback:(NSTimer *)timer {
+    [recorder updateMeters];
+    float volume = [recorder averagePowerForChannel:0];
+    NSLog(@"tem barulho, nivel %f", volume);
+    NSString *volumeString = [NSString stringWithFormat:@"%f", volume];
+    [number setText:volumeString];
+
+
+    
+//    const double ALPHA = 0.05;
+//    double peakPowerForChannel = pow(10, (0.05 * [recorder peakPowerForChannel:0]));
+//    lowPassResults = ALPHA * peakPowerForChannel + (1.0 - ALPHA) * lowPassResults;
+//
+//    if (lowPassResults > 0.95)
+//        NSLog(@"Mic blow detected");
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self listenMic];
     
-    NSURL *url = [NSURL fileURLWithPath:@"/dev/null"];
-    NSDictionary *settings = [NSDictionary dictionaryWithObjectsAndKeys:
-                              [NSNumber numberWithFloat: 44100.0],                 AVSampleRateKey,
-                              [NSNumber numberWithInt: kAudioFormatAppleLossless], AVFormatIDKey,
-                              [NSNumber numberWithInt: 1],                         AVNumberOfChannelsKey,
-                              [NSNumber numberWithInt: AVAudioQualityMax],         AVEncoderAudioQualityKey,
-                              nil];
-    NSError *error;
-    recorder = [[AVAudioRecorder alloc] initWithURL:url settings:settings error:&error];
     
-    if (recorder) {
-        [recorder prepareToRecord];
-        recorder.meteringEnabled = YES;
-        [recorder record];
-        levelTimer = [NSTimer scheduledTimerWithTimeInterval: 0.03 target: self selector: @selector(levelTimerCallback:) userInfo: nil repeats: YES];
-    } else
-        NSLog(@"%@", [error description]);
 }
 
 - (void)didReceiveMemoryWarning {
@@ -44,16 +75,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)levelTimerCallback:(NSTimer *)timer {
-    [recorder updateMeters];
-    
-    const double ALPHA = 0.05;
-    double peakPowerForChannel = pow(10, (0.05 * [recorder peakPowerForChannel:0]));
-    lowPassResults = ALPHA * peakPowerForChannel + (1.0 - ALPHA) * lowPassResults;
-    
-    if (lowPassResults > 0.95)
-        NSLog(@"Mic blow detected");
-}
+
 
 /*
 #pragma mark - Navigation

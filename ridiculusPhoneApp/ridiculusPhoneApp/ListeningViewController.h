@@ -14,7 +14,9 @@
 @interface ListeningViewController : UIViewController {
     AVAudioRecorder *recorder;
     NSTimer *levelTimer;
-    double lowPassResults;
+    
+    __weak IBOutlet UILabel *number;
+    //    double lowPassResults;
 }
 
 - (void) levelTimerCallback:(NSTimer *)timer;
