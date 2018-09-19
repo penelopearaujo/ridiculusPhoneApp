@@ -11,9 +11,6 @@
 
 @interface ListeningViewController ()
 
-@property(readonly) AVAudioSessionRecordPermission recordPermission;
-// https://developer.apple.com/documentation/avfoundation/avaudiosessionrecordpermission?language=objc
-
 @end
 
 @implementation ListeningViewController
@@ -22,10 +19,9 @@
     // detects microphone audio
     
     if (AVAudioSessionRecordPermissionGranted) {
-        NSLog(@"eita, funcionou");
-//        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-//        NSString *documentsDirectory = [paths objectAtIndex:0];
-        NSURL *url = [NSURL fileURLWithPath:@"/dev/null"]; //saves recording into temporary folder and file is erased when the app is closed
+//        NSURL *url = [NSURL fileURLWithPath:@"/dev/null"]; //works on simulator
+        NSURL *url = [[NSURL fileURLWithPath:NSTemporaryDirectory()] URLByAppendingPathComponent:@"nomeDoArquivo.m4a"]; //kinda works on iphone
+
         
         NSDictionary *settings = [NSDictionary dictionaryWithObjectsAndKeys:
                                   [NSNumber numberWithFloat: 44100.0],                 AVSampleRateKey,
@@ -40,7 +36,7 @@
             [recorder prepareToRecord];
             recorder.meteringEnabled = YES;
             [recorder record];
-            levelTimer = [NSTimer scheduledTimerWithTimeInterval: 0.03 target: self selector: @selector(levelTimerCallback:) userInfo: nil repeats: YES];
+            levelTimer = [NSTimer scheduledTimerWithTimeInterval: 0.5 target: self selector: @selector(levelTimerCallback:) userInfo: nil repeats: YES];
         } else
             NSLog(@"%@", [error description]);
     }
@@ -52,21 +48,29 @@
     NSLog(@"tem barulho, nivel %f", volume);
     NSString *volumeString = [NSString stringWithFormat:@"%f", volume];
     [number setText:volumeString];
-
-
-    
-//    const double ALPHA = 0.05;
-//    double peakPowerForChannel = pow(10, (0.05 * [recorder peakPowerForChannel:0]));
-//    lowPassResults = ALPHA * peakPowerForChannel + (1.0 - ALPHA) * lowPassResults;
-//
-//    if (lowPassResults > 0.95)
-//        NSLog(@"Mic blow detected");
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self listenMic];
+//    [self listenMic];
     
+    AVAudioSession *recordingSession = [AVAudioSession sharedInstance];
+    NSError *error;
+    [recordingSession setCategory:AVAudioSessionCategoryPlayAndRecord error:&error];
+    [recordingSession setActive:TRUE error:&error];
+    [recordingSession requestRecordPermission:^(BOOL granted) {
+        if (granted){
+            [self listenMic];
+        } else {
+            NSLog(@"deu ruim");
+        }
+    }];
+    
+//    [AVCaptureDevice requestAccessForMediaType:AVMediaTypeAudio completionHandler:^(BOOL granted) {
+//        if (granted) {
+//            [self listenMic];
+//        }
+//    }];
     
 }
 
