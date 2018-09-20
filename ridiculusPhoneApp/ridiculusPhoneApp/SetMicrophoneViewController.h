@@ -9,6 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface SetMicrophoneViewController : UIViewController
+
 - (IBAction)okListenButton:(id)sender;
+@property (weak, nonatomic) IBOutlet UILabel *numberTeamsLabel;
+
+@property (nonatomic) NSInteger *numberOfTeams;
+
 
 @end

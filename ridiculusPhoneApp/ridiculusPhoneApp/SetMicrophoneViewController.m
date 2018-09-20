@@ -17,7 +17,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    NSString *inStr = [NSString stringWithFormat:@"%ld", (long)_numberOfTeams];
+    _numberTeamsLabel.text = inStr;
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -36,8 +40,9 @@
 */
 
 - (IBAction)okListenButton:(id)sender {
-    // this button must open the next view controller (listening), when the listen function will be activated
     
+    // segue para proxima tela
+    [self performSegueWithIdentifier:@"setMicToListen" sender:self];
     
     
 }

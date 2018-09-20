@@ -16,7 +16,6 @@
     NSTimer *levelTimer;
     
     __weak IBOutlet UILabel *number;
-    //    double lowPassResults;
 }
 
 - (void) levelTimerCallback:(NSTimer *)timer;

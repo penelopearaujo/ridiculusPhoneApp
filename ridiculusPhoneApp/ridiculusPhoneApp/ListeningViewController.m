@@ -20,7 +20,7 @@
     
     if (AVAudioSessionRecordPermissionGranted) {
 //        NSURL *url = [NSURL fileURLWithPath:@"/dev/null"]; //works on simulator
-        NSURL *url = [[NSURL fileURLWithPath:NSTemporaryDirectory()] URLByAppendingPathComponent:@"nomeDoArquivo.m4a"]; //kinda works on iphone
+        NSURL *url = [[NSURL fileURLWithPath:NSTemporaryDirectory()] URLByAppendingPathComponent:@"nomeDoArquivo.m4a"]; //works on iphone
 
         
         NSDictionary *settings = [NSDictionary dictionaryWithObjectsAndKeys:
