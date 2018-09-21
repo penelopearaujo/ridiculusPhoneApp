@@ -14,24 +14,25 @@
 
 @implementation SearchViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+
+// aqui, quando o telefone encontrar a tv, tem que chamar a proxima linha de codigo pra chamar a proxima tela.
+// coloquei um botao pra funcionar so enquanto a gente ta testando, depois podemos excluir
+//[self performSegueWithIdentifier:@"searchToTeams" sender:self];
+
+
+- (IBAction)searchOkButton:(id)sender {
+    [self performSegueWithIdentifier:@"searchToTeams" sender:self];
 }
-*/
-
 @end
