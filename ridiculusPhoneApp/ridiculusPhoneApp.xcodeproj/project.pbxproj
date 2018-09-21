@@ -7,6 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		38BEA1FD2155687400CCDA4A /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BEA1DD2155687300CCDA4A /* Connection.swift */; };
+		38BEA1FE2155687400CCDA4A /* ConnectionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BEA1DE2155687300CCDA4A /* ConnectionError.swift */; };
+		38BEA1FF2155687400CCDA4A /* ConnectionID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BEA1DF2155687300CCDA4A /* ConnectionID.swift */; };
+		38BEA2002155687400CCDA4A /* ConnectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BEA1E02155687300CCDA4A /* ConnectionDelegate.swift */; };
+		38BEA2012155687400CCDA4A /* StreamExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BEA1E12155687300CCDA4A /* StreamExtensions.swift */; };
+		38BEA2022155687400CCDA4A /* IncomingMessageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BEA1E32155687300CCDA4A /* IncomingMessageData.swift */; };
+		38BEA2032155687400CCDA4A /* KeepAliveMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BEA1E42155687300CCDA4A /* KeepAliveMessage.swift */; };
+		38BEA2042155687400CCDA4A /* JSONConvertibleMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BEA1E52155687300CCDA4A /* JSONConvertibleMessage.swift */; };
+		38BEA2052155687400CCDA4A /* ServerMessenger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BEA1E72155687300CCDA4A /* ServerMessenger.swift */; };
+		38BEA2062155687400CCDA4A /* TibeiServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BEA1E82155687300CCDA4A /* TibeiServer.swift */; };
+		38BEA2072155687400CCDA4A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BEA1EA2155687300CCDA4A /* Constants.swift */; };
+		38BEA2082155687400CCDA4A /* Messenger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BEA1EB2155687300CCDA4A /* Messenger.swift */; };
+		38BEA2092155687400CCDA4A /* ConnectionResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BEA1ED2155687300CCDA4A /* ConnectionResponder.swift */; };
+		38BEA20A2155687400CCDA4A /* ConnectionLostEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BEA1EF2155687300CCDA4A /* ConnectionLostEvent.swift */; };
+		38BEA20B2155687400CCDA4A /* ConnectionEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BEA1F02155687300CCDA4A /* ConnectionEvent.swift */; };
+		38BEA20C2155687400CCDA4A /* ConnectionAcceptedEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BEA1F12155687300CCDA4A /* ConnectionAcceptedEvent.swift */; };
+		38BEA20D2155687400CCDA4A /* IncomingMessageEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BEA1F22155687300CCDA4A /* IncomingMessageEvent.swift */; };
+		38BEA20E2155687400CCDA4A /* ResponderChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BEA1F32155687300CCDA4A /* ResponderChain.swift */; };
+		38BEA20F2155687400CCDA4A /* TibeiServiceBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BEA1F52155687300CCDA4A /* TibeiServiceBrowser.swift */; };
+		38BEA2102155687400CCDA4A /* ClientMessenger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BEA1F62155687300CCDA4A /* ClientMessenger.swift */; };
+		38BEA2112155687400CCDA4A /* ClientResponderChainNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BEA1F82155687300CCDA4A /* ClientResponderChainNode.swift */; };
+		38BEA2122155687400CCDA4A /* ClientConnectionResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BEA1F92155687300CCDA4A /* ClientConnectionResponder.swift */; };
+		38BEA2132155687400CCDA4A /* ServiceAvailabilityChangeEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BEA1FB2155687300CCDA4A /* ServiceAvailabilityChangeEvent.swift */; };
+		38BEA2142155687400CCDA4A /* TibeiServiceBrowserDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BEA1FC2155687300CCDA4A /* TibeiServiceBrowserDelegate.swift */; };
 		520DA9EC21541C640053BF5F /* TeamsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 520DA9EB21541C640053BF5F /* TeamsViewController.m */; };
 		522E38382151731100AD682F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 522E38372151731100AD682F /* AppDelegate.m */; };
 		522E383B2151731100AD682F /* ConnectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 522E383A2151731100AD682F /* ConnectViewController.m */; };
@@ -21,6 +45,31 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		38BEA1D82155685D00CCDA4A /* ridiculusPhoneApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ridiculusPhoneApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		38BEA1DD2155687300CCDA4A /* Connection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
+		38BEA1DE2155687300CCDA4A /* ConnectionError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionError.swift; sourceTree = "<group>"; };
+		38BEA1DF2155687300CCDA4A /* ConnectionID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionID.swift; sourceTree = "<group>"; };
+		38BEA1E02155687300CCDA4A /* ConnectionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionDelegate.swift; sourceTree = "<group>"; };
+		38BEA1E12155687300CCDA4A /* StreamExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamExtensions.swift; sourceTree = "<group>"; };
+		38BEA1E32155687300CCDA4A /* IncomingMessageData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IncomingMessageData.swift; sourceTree = "<group>"; };
+		38BEA1E42155687300CCDA4A /* KeepAliveMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeepAliveMessage.swift; sourceTree = "<group>"; };
+		38BEA1E52155687300CCDA4A /* JSONConvertibleMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONConvertibleMessage.swift; sourceTree = "<group>"; };
+		38BEA1E72155687300CCDA4A /* ServerMessenger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerMessenger.swift; sourceTree = "<group>"; };
+		38BEA1E82155687300CCDA4A /* TibeiServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TibeiServer.swift; sourceTree = "<group>"; };
+		38BEA1EA2155687300CCDA4A /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		38BEA1EB2155687300CCDA4A /* Messenger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Messenger.swift; sourceTree = "<group>"; };
+		38BEA1ED2155687300CCDA4A /* ConnectionResponder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionResponder.swift; sourceTree = "<group>"; };
+		38BEA1EF2155687300CCDA4A /* ConnectionLostEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionLostEvent.swift; sourceTree = "<group>"; };
+		38BEA1F02155687300CCDA4A /* ConnectionEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionEvent.swift; sourceTree = "<group>"; };
+		38BEA1F12155687300CCDA4A /* ConnectionAcceptedEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionAcceptedEvent.swift; sourceTree = "<group>"; };
+		38BEA1F22155687300CCDA4A /* IncomingMessageEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IncomingMessageEvent.swift; sourceTree = "<group>"; };
+		38BEA1F32155687300CCDA4A /* ResponderChain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponderChain.swift; sourceTree = "<group>"; };
+		38BEA1F52155687300CCDA4A /* TibeiServiceBrowser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TibeiServiceBrowser.swift; sourceTree = "<group>"; };
+		38BEA1F62155687300CCDA4A /* ClientMessenger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientMessenger.swift; sourceTree = "<group>"; };
+		38BEA1F82155687300CCDA4A /* ClientResponderChainNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientResponderChainNode.swift; sourceTree = "<group>"; };
+		38BEA1F92155687300CCDA4A /* ClientConnectionResponder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientConnectionResponder.swift; sourceTree = "<group>"; };
+		38BEA1FB2155687300CCDA4A /* ServiceAvailabilityChangeEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceAvailabilityChangeEvent.swift; sourceTree = "<group>"; };
+		38BEA1FC2155687300CCDA4A /* TibeiServiceBrowserDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TibeiServiceBrowserDelegate.swift; sourceTree = "<group>"; };
 		520DA9EA21541C640053BF5F /* TeamsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TeamsViewController.h; sourceTree = "<group>"; };
 		520DA9EB21541C640053BF5F /* TeamsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TeamsViewController.m; sourceTree = "<group>"; };
 		522E38332151731100AD682F /* ridiculusPhoneApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ridiculusPhoneApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,6 +103,109 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		38BEA1DB2155687300CCDA4A /* Tibei */ = {
+			isa = PBXGroup;
+			children = (
+				38BEA1DC2155687300CCDA4A /* connection */,
+				38BEA1E12155687300CCDA4A /* StreamExtensions.swift */,
+				38BEA1E22155687300CCDA4A /* message */,
+				38BEA1E62155687300CCDA4A /* server */,
+				38BEA1E92155687300CCDA4A /* common */,
+				38BEA1F42155687300CCDA4A /* client */,
+			);
+			path = Tibei;
+			sourceTree = "<group>";
+		};
+		38BEA1DC2155687300CCDA4A /* connection */ = {
+			isa = PBXGroup;
+			children = (
+				38BEA1DD2155687300CCDA4A /* Connection.swift */,
+				38BEA1DE2155687300CCDA4A /* ConnectionError.swift */,
+				38BEA1DF2155687300CCDA4A /* ConnectionID.swift */,
+				38BEA1E02155687300CCDA4A /* ConnectionDelegate.swift */,
+			);
+			path = connection;
+			sourceTree = "<group>";
+		};
+		38BEA1E22155687300CCDA4A /* message */ = {
+			isa = PBXGroup;
+			children = (
+				38BEA1E32155687300CCDA4A /* IncomingMessageData.swift */,
+				38BEA1E42155687300CCDA4A /* KeepAliveMessage.swift */,
+				38BEA1E52155687300CCDA4A /* JSONConvertibleMessage.swift */,
+			);
+			path = message;
+			sourceTree = "<group>";
+		};
+		38BEA1E62155687300CCDA4A /* server */ = {
+			isa = PBXGroup;
+			children = (
+				38BEA1E72155687300CCDA4A /* ServerMessenger.swift */,
+				38BEA1E82155687300CCDA4A /* TibeiServer.swift */,
+			);
+			path = server;
+			sourceTree = "<group>";
+		};
+		38BEA1E92155687300CCDA4A /* common */ = {
+			isa = PBXGroup;
+			children = (
+				38BEA1EA2155687300CCDA4A /* Constants.swift */,
+				38BEA1EB2155687300CCDA4A /* Messenger.swift */,
+				38BEA1EC2155687300CCDA4A /* responderChain */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
+		38BEA1EC2155687300CCDA4A /* responderChain */ = {
+			isa = PBXGroup;
+			children = (
+				38BEA1ED2155687300CCDA4A /* ConnectionResponder.swift */,
+				38BEA1EE2155687300CCDA4A /* events */,
+				38BEA1F32155687300CCDA4A /* ResponderChain.swift */,
+			);
+			path = responderChain;
+			sourceTree = "<group>";
+		};
+		38BEA1EE2155687300CCDA4A /* events */ = {
+			isa = PBXGroup;
+			children = (
+				38BEA1EF2155687300CCDA4A /* ConnectionLostEvent.swift */,
+				38BEA1F02155687300CCDA4A /* ConnectionEvent.swift */,
+				38BEA1F12155687300CCDA4A /* ConnectionAcceptedEvent.swift */,
+				38BEA1F22155687300CCDA4A /* IncomingMessageEvent.swift */,
+			);
+			path = events;
+			sourceTree = "<group>";
+		};
+		38BEA1F42155687300CCDA4A /* client */ = {
+			isa = PBXGroup;
+			children = (
+				38BEA1F52155687300CCDA4A /* TibeiServiceBrowser.swift */,
+				38BEA1F62155687300CCDA4A /* ClientMessenger.swift */,
+				38BEA1F72155687300CCDA4A /* responderChain */,
+				38BEA1FC2155687300CCDA4A /* TibeiServiceBrowserDelegate.swift */,
+			);
+			path = client;
+			sourceTree = "<group>";
+		};
+		38BEA1F72155687300CCDA4A /* responderChain */ = {
+			isa = PBXGroup;
+			children = (
+				38BEA1F82155687300CCDA4A /* ClientResponderChainNode.swift */,
+				38BEA1F92155687300CCDA4A /* ClientConnectionResponder.swift */,
+				38BEA1FA2155687300CCDA4A /* events */,
+			);
+			path = responderChain;
+			sourceTree = "<group>";
+		};
+		38BEA1FA2155687300CCDA4A /* events */ = {
+			isa = PBXGroup;
+			children = (
+				38BEA1FB2155687300CCDA4A /* ServiceAvailabilityChangeEvent.swift */,
+			);
+			path = events;
+			sourceTree = "<group>";
+		};
 		522E382A2151731100AD682F = {
 			isa = PBXGroup;
 			children = (
@@ -73,6 +225,7 @@
 		522E38352151731100AD682F /* ridiculusPhoneApp */ = {
 			isa = PBXGroup;
 			children = (
+				38BEA1DB2155687300CCDA4A /* Tibei */,
 				522E38362151731100AD682F /* AppDelegate.h */,
 				522E38372151731100AD682F /* AppDelegate.m */,
 				522E38392151731100AD682F /* ConnectViewController.h */,
@@ -92,6 +245,7 @@
 				522E38412151731200AD682F /* LaunchScreen.storyboard */,
 				522E38442151731200AD682F /* Info.plist */,
 				522E38452151731200AD682F /* main.m */,
+				38BEA1D82155685D00CCDA4A /* ridiculusPhoneApp-Bridging-Header.h */,
 			);
 			path = ridiculusPhoneApp;
 			sourceTree = "<group>";
@@ -127,6 +281,7 @@
 				TargetAttributes = {
 					522E38322151731100AD682F = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -166,13 +321,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38BEA2102155687400CCDA4A /* ClientMessenger.swift in Sources */,
+				38BEA2062155687400CCDA4A /* TibeiServer.swift in Sources */,
+				38BEA2072155687400CCDA4A /* Constants.swift in Sources */,
+				38BEA20A2155687400CCDA4A /* ConnectionLostEvent.swift in Sources */,
 				522E3851215180EE00AD682F /* SetMicrophoneViewController.m in Sources */,
+				38BEA1FD2155687400CCDA4A /* Connection.swift in Sources */,
 				522E383B2151731100AD682F /* ConnectViewController.m in Sources */,
+				38BEA20F2155687400CCDA4A /* TibeiServiceBrowser.swift in Sources */,
+				38BEA2042155687400CCDA4A /* JSONConvertibleMessage.swift in Sources */,
+				38BEA2052155687400CCDA4A /* ServerMessenger.swift in Sources */,
+				38BEA2092155687400CCDA4A /* ConnectionResponder.swift in Sources */,
+				38BEA2142155687400CCDA4A /* TibeiServiceBrowserDelegate.swift in Sources */,
+				38BEA1FF2155687400CCDA4A /* ConnectionID.swift in Sources */,
+				38BEA20E2155687400CCDA4A /* ResponderChain.swift in Sources */,
+				38BEA20B2155687400CCDA4A /* ConnectionEvent.swift in Sources */,
+				38BEA20C2155687400CCDA4A /* ConnectionAcceptedEvent.swift in Sources */,
+				38BEA2132155687400CCDA4A /* ServiceAvailabilityChangeEvent.swift in Sources */,
+				38BEA2112155687400CCDA4A /* ClientResponderChainNode.swift in Sources */,
 				522E38542151810800AD682F /* ListeningViewController.m in Sources */,
+				38BEA2022155687400CCDA4A /* IncomingMessageData.swift in Sources */,
+				38BEA2032155687400CCDA4A /* KeepAliveMessage.swift in Sources */,
+				38BEA2082155687400CCDA4A /* Messenger.swift in Sources */,
 				528DB244215469D9007BE3E1 /* ResultsViewController.m in Sources */,
+				38BEA2122155687400CCDA4A /* ClientConnectionResponder.swift in Sources */,
+				38BEA2002155687400CCDA4A /* ConnectionDelegate.swift in Sources */,
 				520DA9EC21541C640053BF5F /* TeamsViewController.m in Sources */,
 				522E38462151731200AD682F /* main.m in Sources */,
+				38BEA20D2155687400CCDA4A /* IncomingMessageEvent.swift in Sources */,
 				522E384E2151800500AD682F /* SearchViewController.m in Sources */,
+				38BEA2012155687400CCDA4A /* StreamExtensions.swift in Sources */,
+				38BEA1FE2155687400CCDA4A /* ConnectionError.swift in Sources */,
 				522E38382151731100AD682F /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -313,6 +492,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JM6RH6V5Z9;
 				INFOPLIST_FILE = ridiculusPhoneApp/Info.plist;
@@ -323,6 +503,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.ufpe.cin.ridiculusPhoneApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ridiculusPhoneApp/ridiculusPhoneApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -331,6 +514,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JM6RH6V5Z9;
 				INFOPLIST_FILE = ridiculusPhoneApp/Info.plist;
@@ -341,6 +525,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.ufpe.cin.ridiculusPhoneApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ridiculusPhoneApp/ridiculusPhoneApp-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
