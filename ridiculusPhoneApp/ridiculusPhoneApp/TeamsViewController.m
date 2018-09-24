@@ -27,8 +27,8 @@
 - (IBAction)submitTeamsButton:(id)sender {
     //calcula numero de times
     NSString *inputTextField = [numberTeamsTextField text];
-    _numberOfPeopleInt = [inputTextField integerValue]/3;
-    NSLog(@"numerooo %d\n", _numberOfPeopleInt); //checkpoint kkk
+    _numberOfTeamsInt = [inputTextField integerValue]/3;
+//    NSLog(@"numerooo %d\n", _numberOfPeopleInt); //checkpoint kkk
 
     //chama a segue para a próxima tela
     [self performSegueWithIdentifier:@"teamsToSetMicrophone" sender:self];
@@ -38,7 +38,7 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqualToString:@"teamsToSetMicrophone"]){
         SetMicrophoneViewController *ViewControllerObject = [segue destinationViewController];
-        ViewControllerObject.numberOfTeams = _numberOfPeopleInt;
+        ViewControllerObject.numberOfTeams = _numberOfTeamsInt;
 //        [ViewControllerObject setNumberOfTeams:20]; //faz a mesma coisa da linha anterior
     }
 }

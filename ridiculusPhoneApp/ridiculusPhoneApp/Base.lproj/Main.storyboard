@@ -157,12 +157,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TIMER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZIt-ab-HYf">
+                                <rect key="frame" x="162" y="138" width="50" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="YCt-U8-Y7A"/>
                     </view>
                     <connections>
                         <outlet property="number" destination="tfD-FS-7rX" id="e6Z-jx-EBz"/>
+                        <outlet property="timerLabel" destination="ZIt-ab-HYf" id="Zhh-20-DhU"/>
                         <segue destination="Ypt-Py-hiS" kind="show" id="qBk-Yt-UpD"/>
                     </connections>
                 </viewController>

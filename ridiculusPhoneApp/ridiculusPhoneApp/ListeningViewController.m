@@ -14,15 +14,67 @@
 @end
 
 @implementation ListeningViewController
+@synthesize timerLabel;
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    timerLabel.text = @"0:00";
+
+    //aux variables
+    i = 0;
+    
+    for (i=0; i<_numberOfTeams; i++) {
+        count = 0;
+        
+        //setting timer
+        [self startMatchTimer];
+        
+        //setting recorder
+        AVAudioSession *recordingSession = [AVAudioSession sharedInstance];
+        NSError *error;
+        [recordingSession setCategory:AVAudioSessionCategoryPlayAndRecord error:&error];
+        [recordingSession setActive:TRUE error:&error];
+        [recordingSession requestRecordPermission:^(BOOL granted) {
+            if (granted){
+                [self listenMic];
+            } else {
+                NSLog(@"Error!");
+            }
+        }];
+        
+        //setting end of turn
+        [recorder stop];
+        return;
+    }
+}
+
+- (void) startMatchTimer {
+    matchTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(updateMatchTimer) userInfo:nil repeats:YES];
+}
+
+- (void) updateMatchTimer {
+    // formats time for time label
+    int min = floor(count/100/60);
+    int sec = floor(count/100);
+    if (sec >= 60) {
+        sec = sec % 60;
+    }
+    timerLabel.text = [NSString stringWithFormat:@"%2d:%02d", min, sec];
+    count++;
+    
+    //if time's up, stops timer
+    if (count == 90){
+        [matchTimer invalidate];
+    }
+    NSLog(@"rolou, %d", count);
+}
 
 - (void)listenMic {
     // detects microphone audio
-    
     if (AVAudioSessionRecordPermissionGranted) {
-//        NSURL *url = [NSURL fileURLWithPath:@"/dev/null"]; //works on simulator
+        //        NSURL *url = [NSURL fileURLWithPath:@"/dev/null"]; //works on simulator
         NSURL *url = [[NSURL fileURLWithPath:NSTemporaryDirectory()] URLByAppendingPathComponent:@"nomeDoArquivo.m4a"]; //works on iphone
-
-        
         NSDictionary *settings = [NSDictionary dictionaryWithObjectsAndKeys:
                                   [NSNumber numberWithFloat: 44100.0],                 AVSampleRateKey,
                                   [NSNumber numberWithInt: kAudioFormatAppleLossless], AVFormatIDKey,
@@ -36,11 +88,12 @@
             [recorder prepareToRecord];
             recorder.meteringEnabled = YES;
             [recorder record];
-            levelTimer = [NSTimer scheduledTimerWithTimeInterval: 0.5 target: self selector: @selector(levelTimerCallback:) userInfo: nil repeats: YES];
+            levelTimer = [NSTimer scheduledTimerWithTimeInterval: 1 target: self selector: @selector(levelTimerCallback:) userInfo: nil repeats: YES];
         } else
             NSLog(@"%@", [error description]);
     }
 }
+
 
 - (void)levelTimerCallback:(NSTimer *)timer {
     [recorder updateMeters];
@@ -50,45 +103,9 @@
     [number setText:volumeString];
 }
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-//    [self listenMic];
-    
-    AVAudioSession *recordingSession = [AVAudioSession sharedInstance];
-    NSError *error;
-    [recordingSession setCategory:AVAudioSessionCategoryPlayAndRecord error:&error];
-    [recordingSession setActive:TRUE error:&error];
-    [recordingSession requestRecordPermission:^(BOOL granted) {
-        if (granted){
-            [self listenMic];
-        } else {
-            NSLog(@"deu ruim");
-        }
-    }];
-    
-//    [AVCaptureDevice requestAccessForMediaType:AVMediaTypeAudio completionHandler:^(BOOL granted) {
-//        if (granted) {
-//            [self listenMic];
-//        }
-//    }];
-    
-}
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
-
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

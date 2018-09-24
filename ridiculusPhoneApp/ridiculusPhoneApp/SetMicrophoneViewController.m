@@ -40,10 +40,16 @@
 */
 
 - (IBAction)okListenButton:(id)sender {
-    
     // segue para proxima tela
     [self performSegueWithIdentifier:@"setMicToListen" sender:self];
-    
-    
 }
+
+//envia objetos para outra viewcontroller
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([[segue identifier] isEqualToString:@"setMicToListen"]){
+        ListeningViewController *ViewControllerObject = [segue destinationViewController];
+        ViewControllerObject.numberOfTeams = _numberOfTeams;
+    }
+}
+
 @end

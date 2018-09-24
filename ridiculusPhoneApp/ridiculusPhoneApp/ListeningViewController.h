@@ -16,8 +16,15 @@
     NSTimer *levelTimer;
     
     __weak IBOutlet UILabel *number;
+    
+    NSTimer *matchTimer;
+    int count;
+    NSInteger *i;
 }
 
+@property (weak, nonatomic) IBOutlet UILabel *timerLabel;
+@property (nonatomic) NSInteger *numberOfTeams;
 - (void) levelTimerCallback:(NSTimer *)timer;
+- (void) updateMatchTimer;
 
 @end
