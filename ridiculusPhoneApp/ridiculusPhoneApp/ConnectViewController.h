@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MultipeerConnectivity/MultipeerConnectivity.h>
 
-@interface ConnectViewController : UIViewController
+
+@interface ConnectViewController : UIViewController <MCBrowserViewControllerDelegate>
 - (IBAction)connectButton:(id)sender;
 
 
