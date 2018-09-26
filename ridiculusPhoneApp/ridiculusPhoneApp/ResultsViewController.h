@@ -10,7 +10,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ResultsViewController : UIViewController
+@interface ResultsViewController : UIViewController {
+    NSString *winner;
+}
 
 @property (weak, nonatomic) IBOutlet UILabel *resultMessageLabel;
 @property (weak, nonatomic) IBOutlet UILabel *winnerTeamLabel;
