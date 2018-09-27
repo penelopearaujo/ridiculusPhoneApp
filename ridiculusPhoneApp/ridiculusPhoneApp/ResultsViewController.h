@@ -7,17 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
-
-NS_ASSUME_NONNULL_BEGIN
+#import "ListeningViewController.h"
 
 @interface ResultsViewController : UIViewController {
-    NSString *winner;
+    int ;
 }
 
 @property (weak, nonatomic) IBOutlet UILabel *resultMessageLabel;
-@property (weak, nonatomic) IBOutlet UILabel *winnerTeamLabel;
+@property (weak, nonatomic) IBOutlet UILabel *resultScoreLabel;
+
+@property (nonatomic) NSNumber *winnerFinalScore;
+@property (nonatomic) int *winnerTeamNumber;
 
 
 @end
-
-NS_ASSUME_NONNULL_END

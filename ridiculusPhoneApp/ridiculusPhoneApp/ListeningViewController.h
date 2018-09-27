@@ -19,14 +19,17 @@
     
     NSTimer *matchTimer;
     int totalSeconds;
-    int i;
-    int score[10];
+    int i; //contador do time que está jogando. (substituir por playingTeam ou algo do tipo)
+    int score[10]; //guarda os scores dos times (no máximo 10 times)
+    NSMutableArray *totalScores; //array que guarda os scores também (pra comparar e dizer quem é o time vencedor)
+    int winnerTeam; //número do time vencedor (o número vem de i)
+    NSNumber *winnerTeamScore; //pontuacao do time vencedor
 }
 
 @property (nonatomic) NSInteger *numberOfTeams;
 - (void) levelTimerCallback:(NSTimer *)timer;
-- (void) updateMatchTimer;
 - (void) setMic;
-- (void) teamTimer;
+- (void) prepareTimer;
+- (void) setWinner;
 
 @end
