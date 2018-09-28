@@ -64,13 +64,6 @@
 
 - (IBAction)connectButton:(id)sender {
     
-    //chama a segue para a próxima tela
-    [self performSegueWithIdentifier:@"connectToWaiting" sender:self];
-}
-
-
-// show the browser view controller when the user taps the Browse for other players button
-- (IBAction)connectMultipeer:(UIButton *)sender {
     if (self.appDelegate.mpcHandler.session != nil) {
         // initialize the MCBrowserViewController instance and we then present that instance to the user
         [[self.appDelegate mpcHandler] setupBrowser];
@@ -81,11 +74,16 @@
                            animated:YES
                          completion:nil];
     }
+    
 }
 
 
 - (void)browserViewControllerDidFinish:(MCBrowserViewController *)browserViewController {
-    [self.appDelegate.mpcHandler.browser dismissViewControllerAnimated:YES completion:nil];
+    [self.appDelegate.mpcHandler.browser dismissViewControllerAnimated:YES completion:^{
+        [self performSegueWithIdentifier:@"connectToWaiting2" sender:self];
+
+    }];
+
 }
 
 

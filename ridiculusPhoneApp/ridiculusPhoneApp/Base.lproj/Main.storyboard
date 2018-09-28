@@ -37,14 +37,6 @@
                                     <segue destination="wjS-5P-VGE" kind="show" identifier="connectToWaiting" id="SaM-KO-fKz"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oov-Mz-cVO">
-                                <rect key="frame" x="100" y="551" width="163" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="conectar com multipeer"/>
-                                <connections>
-                                    <action selector="connectMultipeer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dfM-45-X9I"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="RidiculusLogo" translatesAutoresizingMaskIntoConstraints="NO" id="c9G-UA-Riz">
                                 <rect key="frame" x="47" y="267" width="281" height="88"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -58,6 +50,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="cLV-JG-Wqi"/>
+                    <connections>
+                        <segue destination="wjS-5P-VGE" kind="show" identifier="connectToWaiting2" id="AgN-7W-2Li"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -1147,4 +1142,7 @@ Msg/yETITMhPyFTIXMhfyHHIdMh5AAAAAAAAAgEAAAAAAAAAWQAAAAAAAAAAAAAAAAAAyHs
 </mutableData>
         </image>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="AgN-7W-2Li"/>
+    </inferredMetricsTieBreakers>
 </document>

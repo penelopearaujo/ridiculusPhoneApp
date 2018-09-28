@@ -124,6 +124,17 @@
     NSLog(@"tem barulho, nivel %d", volumeInt);
     score[i] = score[i]+volumeInt;
     
+    // manda valor atual pra TV
+    NSString *currentValue = [NSString stringWithFormat:@"r%d", volumeInt];
+    NSLog(@"%@", currentValue);
+    NSData *currentValueAsData = [currentValue dataUsingEncoding:NSUTF8StringEncoding];
+    NSError *error;
+    
+    [self.appDelegate.mpcHandler.session sendData:currentValueAsData
+                                          toPeers:self.appDelegate.mpcHandler.session.connectedPeers
+                                         withMode:MCSessionSendDataReliable
+                                            error:&error];
+    
     // exibe na tela do iphone o volume registrado
     NSString *volumeString = [NSString stringWithFormat:@"%f", volume];
     [number setText:volumeString];
