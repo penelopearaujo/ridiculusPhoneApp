@@ -33,11 +33,18 @@
 
 - (void) prepareTimer {
     // conta 4 segundos e, após 4 segundos, chama a funçao de começar a partida
+    NSLog(@"entrou no prepare");
     matchTimer = [NSTimer scheduledTimerWithTimeInterval:4 repeats:NO block:^(NSTimer * _Nonnull timer) {
-        NSLog(@"entrou no prepare");
         [self startMatchTimer];
     }];
 }
+
+- (void) correctingBugTimer {
+    matchTimer = [NSTimer scheduledTimerWithTimeInterval:4 repeats:NO block:^(NSTimer * _Nonnull timer) {
+        [self performSegueWithIdentifier:@"listenToResult" sender:self];
+    }];
+}
+
 
 - (void) startMatchTimer {
     // timer da partida. enquanto conta 1:30, escuta o barulho do ambiente. depois de 1:30, para de ouvir, registra a pontuacao do time e vai pro próximo time. se for o último time, chama a tela de resultado.
@@ -53,7 +60,7 @@
             [self prepareTimer];
         } else {
             [self setWinner];
-            [self performSegueWithIdentifier:@"listenToResult" sender:self];
+            [self correctingBugTimer];
         }
     }];
     [self setMic];
@@ -116,6 +123,8 @@
 //    NSLog(@"tem barulho, nivel %f", volume);
     NSLog(@"tem barulho, nivel %d", volumeInt);
     score[i] = score[i]+volumeInt;
+    
+    // exibe na tela do iphone o volume registrado
     NSString *volumeString = [NSString stringWithFormat:@"%f", volume];
     [number setText:volumeString];
 }
@@ -143,7 +152,7 @@
                                          withMode:MCSessionSendDataReliable
                                             error:&error];
     // envia qual o score do time vencedor
-    NSString *winnerScore = [[NSNumber numberWithInt:winnerScore] stringValue];
+    NSString *winnerScore = [[NSNumber numberWithInt:winnerTeamScore] stringValue];
     NSLog(@"%@", winnerScore);
     NSData *winnerScoreAsData = [winnerScore dataUsingEncoding:NSUTF8StringEncoding];
     NSError *error2;
@@ -157,7 +166,7 @@
 - (void) setWinner {
     // calcula qual o time vencedor. a funcao chamada é min.self porque a conversao de decibeis para pontos é feita de forma que quem soma menos pontos é o vencedor (será que isso faz sentido)
     winnerTeamScore = [totalScores valueForKeyPath:@"@min.self"];
-    winnerTeam = [totalScores indexOfObject:@"min.self"];
+    winnerTeam = [totalScores indexOfObject:winnerTeamScore]+1;
     NSLog(@"%@", winnerTeamScore);
 }
 

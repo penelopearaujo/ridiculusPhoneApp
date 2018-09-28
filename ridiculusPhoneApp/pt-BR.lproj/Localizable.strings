@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  ridiculusPhoneApp
+
+  Created by Penélope Araújo on 28/09/18.
+  Copyright © 2018 Penélope Araújo. All rights reserved.
+*/
+
+"team %d won!" = "time %d ganhou!";
+"%@ points" = "%@ pontos";

@@ -1,0 +1,33 @@
+
+/* Class = "UIButton"; normalTitle = "connect"; ObjectID = "307-zr-QYy"; */
+"307-zr-QYy.normalTitle" = "conectar";
+
+/* Class = "UILabel"; text = "searching..."; ObjectID = "7zt-bX-aWh"; */
+"7zt-bX-aWh.text" = "buscando...";
+
+/* Class = "UILabel"; text = "Y points"; ObjectID = "Bhv-fA-xiW"; */
+"Bhv-fA-xiW.text" = "Y pontos";
+
+/* Class = "UILabel"; text = "waiting for TV"; ObjectID = "FMC-cd-GPZ"; */
+"FMC-cd-GPZ.text" = "esperando pela TV";
+
+/* Class = "UILabel"; text = "team X won!"; ObjectID = "G8B-6c-cPD"; */
+"G8B-6c-cPD.text" = "time X ganhou!";
+
+/* Class = "UILabel"; text = "we are listening!"; ObjectID = "InH-Dl-pkR"; */
+"InH-Dl-pkR.text" = "estamos ouvindo!";
+
+/* Class = "UIButton"; normalTitle = "Botao pra testar"; ObjectID = "Zzq-H6-iX5"; */
+"Zzq-H6-iX5.normalTitle" = "Botao pra testar";
+
+/* Class = "UIButton"; normalTitle = "Submit"; ObjectID = "mB6-2g-uvX"; */
+"mB6-2g-uvX.normalTitle" = "enviar";
+
+/* Class = "UIButton"; normalTitle = "conectar com multipeer"; ObjectID = "oov-Mz-cVO"; */
+"oov-Mz-cVO.normalTitle" = "conectar com multipeer";
+
+/* Class = "UILabel"; text = "How many people are going to play?"; ObjectID = "r7V-AK-fkn"; */
+"r7V-AK-fkn.text" = "Quantas pessoas vão jogar?";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "tfD-FS-7rX"; */
+"tfD-FS-7rX.text" = "0";

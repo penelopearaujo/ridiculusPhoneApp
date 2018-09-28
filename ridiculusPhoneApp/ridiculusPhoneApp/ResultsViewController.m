@@ -19,8 +19,8 @@
     [super viewDidLoad];
     
     // shows winner team
-    _resultMessageLabel.text = [NSString stringWithFormat:@"team %d won!", _winnerTeamNumber];
-    _resultScoreLabel.text = [NSString stringWithFormat:@"%@ points", _winnerFinalScore];
+    _resultMessageLabel.text = [NSString stringWithFormat:NSLocalizedString(@"team %d won!", nil), _winnerTeamNumber];
+    _resultScoreLabel.text = [NSString stringWithFormat:NSLocalizedString(@"%@ points", nil), _winnerFinalScore];
 }
 
 

@@ -31,5 +31,7 @@
 - (void) setMic;
 - (void) prepareTimer;
 - (void) setWinner;
+- (void) correctingBugTimer;
+
 
 @end
