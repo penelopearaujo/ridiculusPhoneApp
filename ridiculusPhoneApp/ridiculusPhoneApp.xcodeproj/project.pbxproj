@@ -8,14 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		38B16DF621597215009FE377 /* MPCHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B16DF521597215009FE377 /* MPCHandler.m */; };
-		520DA9EC21541C640053BF5F /* TeamsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 520DA9EB21541C640053BF5F /* TeamsViewController.m */; };
 		522E38382151731100AD682F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 522E38372151731100AD682F /* AppDelegate.m */; };
 		522E383B2151731100AD682F /* ConnectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 522E383A2151731100AD682F /* ConnectViewController.m */; };
 		522E383E2151731100AD682F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 522E383C2151731100AD682F /* Main.storyboard */; };
 		522E38402151731200AD682F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 522E383F2151731200AD682F /* Assets.xcassets */; };
 		522E38432151731200AD682F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 522E38412151731200AD682F /* LaunchScreen.storyboard */; };
 		522E38462151731200AD682F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 522E38452151731200AD682F /* main.m */; };
-		522E384E2151800500AD682F /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 522E384D2151800500AD682F /* SearchViewController.m */; };
 		522E3851215180EE00AD682F /* SetMicrophoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 522E3850215180EE00AD682F /* SetMicrophoneViewController.m */; };
 		522E38542151810800AD682F /* ListeningViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 522E38532151810800AD682F /* ListeningViewController.m */; };
 		528DB244215469D9007BE3E1 /* ResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 528DB243215469D9007BE3E1 /* ResultsViewController.m */; };
@@ -24,8 +22,6 @@
 /* Begin PBXFileReference section */
 		38B16DF4215971FD009FE377 /* MPCHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPCHandler.h; sourceTree = "<group>"; };
 		38B16DF521597215009FE377 /* MPCHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPCHandler.m; sourceTree = "<group>"; };
-		520DA9EA21541C640053BF5F /* TeamsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TeamsViewController.h; sourceTree = "<group>"; };
-		520DA9EB21541C640053BF5F /* TeamsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TeamsViewController.m; sourceTree = "<group>"; };
 		522E38332151731100AD682F /* ridiculusPhoneApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ridiculusPhoneApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		522E38362151731100AD682F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		522E38372151731100AD682F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -36,8 +32,6 @@
 		522E38422151731200AD682F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		522E38442151731200AD682F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		522E38452151731200AD682F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		522E384C2151800500AD682F /* SearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
-		522E384D2151800500AD682F /* SearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		522E384F215180EE00AD682F /* SetMicrophoneViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SetMicrophoneViewController.h; sourceTree = "<group>"; };
 		522E3850215180EE00AD682F /* SetMicrophoneViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SetMicrophoneViewController.m; sourceTree = "<group>"; };
 		522E38522151810800AD682F /* ListeningViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListeningViewController.h; sourceTree = "<group>"; };
@@ -80,13 +74,9 @@
 				522E38372151731100AD682F /* AppDelegate.m */,
 				522E38392151731100AD682F /* ConnectViewController.h */,
 				522E383A2151731100AD682F /* ConnectViewController.m */,
-				522E384C2151800500AD682F /* SearchViewController.h */,
-				522E384D2151800500AD682F /* SearchViewController.m */,
 				522E383C2151731100AD682F /* Main.storyboard */,
 				528DB242215469D9007BE3E1 /* ResultsViewController.h */,
 				528DB243215469D9007BE3E1 /* ResultsViewController.m */,
-				520DA9EA21541C640053BF5F /* TeamsViewController.h */,
-				520DA9EB21541C640053BF5F /* TeamsViewController.m */,
 				522E384F215180EE00AD682F /* SetMicrophoneViewController.h */,
 				522E3850215180EE00AD682F /* SetMicrophoneViewController.m */,
 				38B16DF4215971FD009FE377 /* MPCHandler.h */,
@@ -177,9 +167,7 @@
 				522E383B2151731100AD682F /* ConnectViewController.m in Sources */,
 				522E38542151810800AD682F /* ListeningViewController.m in Sources */,
 				528DB244215469D9007BE3E1 /* ResultsViewController.m in Sources */,
-				520DA9EC21541C640053BF5F /* TeamsViewController.m in Sources */,
 				522E38462151731200AD682F /* main.m in Sources */,
-				522E384E2151800500AD682F /* SearchViewController.m in Sources */,
 				522E38382151731100AD682F /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -65,7 +65,7 @@
 - (IBAction)connectButton:(id)sender {
     
     //chama a segue para a próxima tela
-    [self performSegueWithIdentifier:@"connectToSearch" sender:self];
+    [self performSegueWithIdentifier:@"connectToWaiting" sender:self];
 }
 
 

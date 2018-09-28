@@ -9,8 +9,11 @@
 #import "ListeningViewController.h"
 #import "ResultsViewController.h"
 #import <AVFoundation/AVFoundation.h>
+#import "AppDelegate.h"
+
 
 @interface ListeningViewController ()
+@property (nonatomic, strong) AppDelegate *appDelegate;
 
 @end
 
@@ -18,8 +21,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSLog(@"numero de times %d", self.numberOfTeams);
+
+    self.appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+
     [self prepareTimer];
     totalScores = [NSMutableArray new];
+    
 }
 
 
@@ -41,7 +49,7 @@
         NSLog(@"totsl scores:%@", self->totalScores);
         NSLog(@"team %d, score: %d", i, score[i]);
         i++;
-        if (i<_numberOfTeams){
+        if (i<self.numberOfTeams){
             [self prepareTimer];
         } else {
             [self setWinner];
@@ -115,10 +123,35 @@
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // envia para a tela seguinte quem é o vencedor do jogo
     if ([[segue identifier] isEqualToString:@"listenToResult"]){
+        // chama função que envia dados do time vencedor para a TV
+        [self sendData];
         ResultsViewController *ViewControllerObject = [segue destinationViewController];
         ViewControllerObject.winnerFinalScore = winnerTeamScore;
         ViewControllerObject.winnerTeamNumber = winnerTeam;
     }
+}
+
+- (void) sendData {
+    // envia qual time vencedor
+    NSString *winner = [[NSNumber numberWithInt:winnerTeam] stringValue];
+    NSLog(@"%@", winner);
+    NSData *winnerAsData = [winner dataUsingEncoding:NSUTF8StringEncoding];
+    NSError *error;
+    
+    [self.appDelegate.mpcHandler.session sendData:winnerAsData
+                                          toPeers:self.appDelegate.mpcHandler.session.connectedPeers
+                                         withMode:MCSessionSendDataReliable
+                                            error:&error];
+    // envia qual o score do time vencedor
+    NSString *winnerScore = [[NSNumber numberWithInt:winnerScore] stringValue];
+    NSLog(@"%@", winnerScore);
+    NSData *winnerScoreAsData = [winnerScore dataUsingEncoding:NSUTF8StringEncoding];
+    NSError *error2;
+    
+    [self.appDelegate.mpcHandler.session sendData:winnerScoreAsData
+                                          toPeers:self.appDelegate.mpcHandler.session.connectedPeers
+                                         withMode:MCSessionSendDataReliable
+                                            error:&error2];
 }
 
 - (void) setWinner {

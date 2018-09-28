@@ -11,9 +11,8 @@
 @interface SetMicrophoneViewController : UIViewController
 
 - (IBAction)okListenButton:(id)sender;
-@property (weak, nonatomic) IBOutlet UILabel *numberTeamsLabel;
 
-@property (nonatomic) NSInteger *numberOfTeams;
+@property (nonatomic) int *numberOfTeams;
 
 
 @end

@@ -26,7 +26,7 @@
     NSNumber *winnerTeamScore; //pontuacao do time vencedor
 }
 
-@property (nonatomic) NSInteger *numberOfTeams;
+@property (nonatomic) int *numberOfTeams;
 - (void) levelTimerCallback:(NSTimer *)timer;
 - (void) setMic;
 - (void) prepareTimer;
