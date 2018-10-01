@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HiA-Q5-h70">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -22,12 +22,17 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ConnectViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="307-zr-QYy">
-                                <rect key="frame" x="81" y="387" width="212" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RidiculusLogo" translatesAutoresizingMaskIntoConstraints="NO" id="c9G-UA-Riz">
+                                <rect key="frame" x="32" y="193" width="256" height="113.5"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Jelly" translatesAutoresizingMaskIntoConstraints="NO" id="UMg-O4-4hh">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="113.5"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="307-zr-QYy">
+                                <rect key="frame" x="80" y="306.5" width="160" height="41.5"/>
                                 <fontDescription key="fontDescription" name="Nunito-ExtraBold" family="Nunito" pointSize="17"/>
                                 <state key="normal" title="connect" backgroundImage="PlayButton">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -37,16 +42,22 @@
                                     <segue destination="wjS-5P-VGE" kind="show" identifier="connectToWaiting" id="SaM-KO-fKz"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="RidiculusLogo" translatesAutoresizingMaskIntoConstraints="NO" id="c9G-UA-Riz">
-                                <rect key="frame" x="47" y="267" width="281" height="88"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Jelly" translatesAutoresizingMaskIntoConstraints="NO" id="UMg-O4-4hh">
-                                <rect key="frame" x="0.0" y="20" width="375" height="148"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.14117647058823529" green="0.058823529411764705" blue="0.28627450980392155" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="307-zr-QYy" firstAttribute="height" secondItem="c9G-UA-Riz" secondAttribute="height" multiplier="0.3" constant="7" id="9ME-M9-8RQ"/>
+                            <constraint firstItem="UMg-O4-4hh" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="BER-GU-lHu"/>
+                            <constraint firstItem="307-zr-QYy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="80" id="CZO-oa-anT"/>
+                            <constraint firstItem="c9G-UA-Riz" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="0.85" id="KMZ-Lh-gri"/>
+                            <constraint firstItem="c9G-UA-Riz" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="WFM-F5-96D"/>
+                            <constraint firstItem="307-zr-QYy" firstAttribute="top" secondItem="c9G-UA-Riz" secondAttribute="bottom" id="Zq2-V0-14K"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="307-zr-QYy" secondAttribute="trailing" constant="80" id="eHH-7Y-KMK"/>
+                            <constraint firstItem="UMg-O4-4hh" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.2" id="f2B-gG-vdh"/>
+                            <constraint firstItem="c9G-UA-Riz" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.2" id="iT1-VX-BVx"/>
+                            <constraint firstItem="c9G-UA-Riz" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="qyt-yP-Sub"/>
+                            <constraint firstItem="UMg-O4-4hh" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="v3p-z1-KoY"/>
+                            <constraint firstItem="UMg-O4-4hh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="yaF-PI-v8K"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="cLV-JG-Wqi"/>
@@ -81,7 +92,7 @@
             <objects>
                 <viewController id="d2w-YB-Yt5" customClass="SearchViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="f1s-A7-f7P">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="searching..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7zt-bX-aWh">
@@ -117,22 +128,28 @@
             <objects>
                 <viewController id="wjS-5P-VGE" customClass="SetMicrophoneViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ifa-ZA-XrR">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="waiting for TV" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FMC-cd-GPZ">
-                                <rect key="frame" x="105" y="405" width="164" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Nunito-SemiBold" family="Nunito" pointSize="17"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TV" translatesAutoresizingMaskIntoConstraints="NO" id="e8f-hF-Hzm">
+                                <rect key="frame" x="64" y="179.5" width="192" height="170.5"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="waiting for TV" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FMC-cd-GPZ">
+                                <rect key="frame" x="95" y="358" width="130.5" height="27.5"/>
+                                <fontDescription key="fontDescription" name="Nunito-SemiBold" family="Nunito" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="TV" translatesAutoresizingMaskIntoConstraints="NO" id="e8f-hF-Hzm">
-                                <rect key="frame" x="67" y="154" width="240" height="258"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.14117647059999999" green="0.078431372550000003" blue="0.2784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="FMC-cd-GPZ" firstAttribute="centerX" secondItem="J92-bs-Zph" secondAttribute="centerX" id="3o9-6s-5lP"/>
+                            <constraint firstItem="e8f-hF-Hzm" firstAttribute="height" secondItem="ifa-ZA-XrR" secondAttribute="height" multiplier="0.3" id="ExR-sU-RUt"/>
+                            <constraint firstItem="e8f-hF-Hzm" firstAttribute="centerY" secondItem="J92-bs-Zph" secondAttribute="centerY" multiplier="0.9" id="QUf-XL-ake"/>
+                            <constraint firstItem="e8f-hF-Hzm" firstAttribute="centerX" secondItem="J92-bs-Zph" secondAttribute="centerX" id="lbw-Fe-n9m"/>
+                            <constraint firstItem="e8f-hF-Hzm" firstAttribute="width" secondItem="ifa-ZA-XrR" secondAttribute="width" multiplier="0.6" id="rgY-vc-L0y"/>
+                            <constraint firstItem="FMC-cd-GPZ" firstAttribute="top" secondItem="e8f-hF-Hzm" secondAttribute="bottom" constant="8" id="xtB-mk-V4B"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="J92-bs-Zph"/>
                     </view>
                     <connections>
@@ -148,7 +165,7 @@
             <objects>
                 <viewController storyboardIdentifier="listeningViewcControllerID" id="wzI-HM-T6e" customClass="ListeningViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2fp-KC-RPR">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tfD-FS-7rX">
@@ -158,19 +175,25 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="we are listening!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="InH-Dl-pkR">
-                                <rect key="frame" x="126" y="414" width="126" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Nunito-SemiBold" family="Nunito" pointSize="17"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mic" translatesAutoresizingMaskIntoConstraints="NO" id="mOA-Ao-W9p">
+                                <rect key="frame" x="112" y="179.5" width="96" height="170.5"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="we are listening!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="InH-Dl-pkR">
+                                <rect key="frame" x="86" y="358" width="148" height="28"/>
+                                <fontDescription key="fontDescription" name="Nunito-SemiBold" family="Nunito" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Mic" translatesAutoresizingMaskIntoConstraints="NO" id="mOA-Ao-W9p">
-                                <rect key="frame" x="126" y="136" width="122" height="270"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.14117647058823529" green="0.078431372549019607" blue="0.27843137254901962" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="InH-Dl-pkR" firstAttribute="top" secondItem="mOA-Ao-W9p" secondAttribute="bottom" constant="8" id="0OR-PQ-AmR"/>
+                            <constraint firstItem="InH-Dl-pkR" firstAttribute="centerX" secondItem="YCt-U8-Y7A" secondAttribute="centerX" id="2E0-MH-QO7"/>
+                            <constraint firstItem="mOA-Ao-W9p" firstAttribute="height" secondItem="2fp-KC-RPR" secondAttribute="height" multiplier="0.3" id="CdZ-yT-oDk"/>
+                            <constraint firstItem="mOA-Ao-W9p" firstAttribute="width" secondItem="2fp-KC-RPR" secondAttribute="width" multiplier="0.3" id="fLx-ej-Iyk"/>
+                            <constraint firstItem="mOA-Ao-W9p" firstAttribute="centerY" secondItem="YCt-U8-Y7A" secondAttribute="centerY" multiplier="0.9" id="nai-m4-rOr"/>
+                            <constraint firstItem="mOA-Ao-W9p" firstAttribute="centerX" secondItem="YCt-U8-Y7A" secondAttribute="centerX" id="tk2-v1-5Ok"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="YCt-U8-Y7A"/>
                     </view>
                     <connections>
@@ -180,40 +203,50 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A1X-3M-LQ4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2869.5999999999999" y="133.5832083958021"/>
+            <point key="canvasLocation" x="2868.75" y="133.09859154929578"/>
         </scene>
         <!--Results View Controller-->
         <scene sceneID="QUm-fL-3pY">
             <objects>
                 <viewController id="Ypt-Py-hiS" customClass="ResultsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EKg-op-Yng">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="team X won!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G8B-6c-cPD">
-                                <rect key="frame" x="47" y="403" width="280" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="team X won!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G8B-6c-cPD">
+                                <rect key="frame" x="92.5" y="335.5" width="135.5" height="31.5"/>
                                 <fontDescription key="fontDescription" name="Nunito-ExtraBold" family="Nunito" pointSize="23"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Duck" translatesAutoresizingMaskIntoConstraints="NO" id="DkF-cp-mKp">
-                                <rect key="frame" x="85" y="196" width="205" height="186"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Duck" translatesAutoresizingMaskIntoConstraints="NO" id="DkF-cp-mKp">
+                                <rect key="frame" x="104" y="150" width="112" height="170.5"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Confetti" translatesAutoresizingMaskIntoConstraints="NO" id="Jyc-Hg-lem">
-                                <rect key="frame" x="16" y="20" width="343" height="123"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Y points" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bhv-fA-xiW">
-                                <rect key="frame" x="112" y="440" width="151" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Nunito-SemiBold" family="Nunito" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Y points" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bhv-fA-xiW">
+                                <rect key="frame" x="121.5" y="382" width="77.5" height="29"/>
+                                <fontDescription key="fontDescription" name="Nunito-SemiBold" family="Nunito" pointSize="21"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Confetti" translatesAutoresizingMaskIntoConstraints="NO" id="Jyc-Hg-lem">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="113.5"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.14117647059999999" green="0.078431372550000003" blue="0.2784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Bro-gj-7MV" firstAttribute="trailing" secondItem="Jyc-Hg-lem" secondAttribute="trailing" id="10U-KA-ALI"/>
+                            <constraint firstItem="Bhv-fA-xiW" firstAttribute="centerX" secondItem="Bro-gj-7MV" secondAttribute="centerX" id="75B-OA-Hrw"/>
+                            <constraint firstItem="G8B-6c-cPD" firstAttribute="centerX" secondItem="Bro-gj-7MV" secondAttribute="centerX" id="8bm-zi-gdm"/>
+                            <constraint firstItem="Jyc-Hg-lem" firstAttribute="height" secondItem="EKg-op-Yng" secondAttribute="height" multiplier="0.2" id="KPx-cj-jxv"/>
+                            <constraint firstItem="DkF-cp-mKp" firstAttribute="centerY" secondItem="Bro-gj-7MV" secondAttribute="centerY" multiplier="0.8" id="L1t-NJ-PpI"/>
+                            <constraint firstItem="DkF-cp-mKp" firstAttribute="width" secondItem="EKg-op-Yng" secondAttribute="width" multiplier="0.35" id="PWi-2J-ZtQ"/>
+                            <constraint firstItem="Bhv-fA-xiW" firstAttribute="top" secondItem="G8B-6c-cPD" secondAttribute="bottom" constant="15" id="PpQ-ZO-FcI"/>
+                            <constraint firstItem="Jyc-Hg-lem" firstAttribute="leading" secondItem="Bro-gj-7MV" secondAttribute="leading" id="RbN-iB-36b"/>
+                            <constraint firstItem="DkF-cp-mKp" firstAttribute="height" secondItem="EKg-op-Yng" secondAttribute="height" multiplier="0.3" id="SXO-Av-hRc"/>
+                            <constraint firstItem="DkF-cp-mKp" firstAttribute="centerX" secondItem="Bro-gj-7MV" secondAttribute="centerX" id="UhA-NW-8V1"/>
+                            <constraint firstItem="G8B-6c-cPD" firstAttribute="top" secondItem="DkF-cp-mKp" secondAttribute="bottom" constant="15" id="ZdL-co-CDN"/>
+                            <constraint firstItem="Jyc-Hg-lem" firstAttribute="top" secondItem="EKg-op-Yng" secondAttribute="top" id="f21-DV-UUV"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Bro-gj-7MV"/>
                     </view>
                     <connections>
@@ -230,7 +263,7 @@
             <objects>
                 <viewController id="G9h-mV-Od2" customClass="TeamsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TCT-oK-Fdl">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How many people are going to play?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r7V-AK-fkn">
